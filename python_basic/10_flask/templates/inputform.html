@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <br/><br/>
+    <h4>Member Join</h4>
+    <form action="/inputform" method="post">
+        <div class="mb-3">
+          <label for="Name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="Name" name="name" aria-describedby="NameHelp">
+          <div id="NameHelp" class="form-text">이름은 본명이 아니어도 가능합니다!</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="aaa@google.com">
+            <div id="emailHelp" class="form-text">이메일형식으로 입력해주세요!</div>
+          </div>
+        <div class="mb-3">
+            <label for="Tel" class="form-label">Tel</label>
+            <input type="text" class="form-control" id="Tel" name="tel" aria-describedby="TelHelp">
+            <div id="TelHelp" class="form-text">전화번호는 - 를 넣어서 입력해주세요!</div>
+        </div>
+        <div class="mb-3">
+            <label for="Address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="Address" name="address" aria-describedby="AddressHelp">
+            <div id="AddressHelp" class="form-text">도로명 주소로 기입해주세요!</div>
+        </div>
+        <div class="mb-3">
+            <select class="form-select" aria-label=".form-select-lg example" name="gender">
+                <option selected>성별을 골라주세요</option>
+                <option value="남자">남자</option>
+                <option value="여자">여자</option>
+            </select>
+        </div>
+        <!---
+        <div class="mb-3">
+            <label for="guestBook" class="form-label">하고싶은 말</label><br/>
+            <textarea name="guestBook"></textarea>
+        </div>
+        -->
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="하고싶은 말을 남겨주세요" id="guestBook" style="height: 100px" name="guestBook"></textarea>
+            <label for="guestBook">방명록</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+</div>
+{% endblock %}

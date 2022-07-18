@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <br/><br/>
+    <h4>Member List</h4>
+    <table class="table table-hover table-striped">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Tel</th>
+          <th scope="col">Address</th>
+          <th scope="col">Gender</th>
+          <th scope="col">guestBook</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in data%}
+        <tr>
+          <th scope="row">{{loop.index}}</th>  <!--값이라서 중괄호 두개~~ -->
+          <td>{{item[0]}}</td>
+          <td>{{item[1]}}</td>
+          <td>{{item[2]}}</td>
+          <td>{{item[3]}}</td>
+          <td>{{item[4]}}</td>
+          <td>{{item[5]}}</td>
+        </tr>
+        {% endfor%}
+      </tbody>
+    </table>
+</div>
+{% endblock %}
